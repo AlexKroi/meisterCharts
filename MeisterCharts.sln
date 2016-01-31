@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeisterCharts", "MeisterCharts\MeisterCharts.csproj", "{01004982-06CA-4113-99FA-FA063A9E4391}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{14AB76C2-AA0C-4D83-91A4-B0C27D11FF04}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{E14B8E17-3601-4998-B00D-E982B7F19D49}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\MeisterCharts-WAWS-dev.json = PublishScripts\Configurations\MeisterCharts-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01004982-06CA-4113-99FA-FA063A9E4391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01004982-06CA-4113-99FA-FA063A9E4391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01004982-06CA-4113-99FA-FA063A9E4391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01004982-06CA-4113-99FA-FA063A9E4391}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E14B8E17-3601-4998-B00D-E982B7F19D49} = {14AB76C2-AA0C-4D83-91A4-B0C27D11FF04}
+	EndGlobalSection
+EndGlobal
