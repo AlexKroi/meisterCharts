@@ -34,15 +34,15 @@
             </tr>
             <tr>
                 <td>AfA Gebäude</td>
-                <td><telerik:RadNumericTextBox ID="TbAfAGebäude" Value="6280" runat="server"><NumberFormat DecimalSeparator=","  GroupSeparator="." /></telerik:RadNumericTextBox></td>
+                <td><telerik:RadNumericTextBox ID="TbAfAGebäude" Value="9000" runat="server"><NumberFormat DecimalSeparator=","  GroupSeparator="." /></telerik:RadNumericTextBox></td>
             </tr>
             <tr>
                 <td>Sozialeinkünfte</td>
-                <td><telerik:RadNumericTextBox ID="TbSozial" Value="0" runat="server"><NumberFormat DecimalSeparator="," GroupSeparator="."  /></telerik:RadNumericTextBox></td>
+                <td><telerik:RadNumericTextBox ID="TbSozial" Value="7000" runat="server"><NumberFormat DecimalSeparator="," GroupSeparator="."  /></telerik:RadNumericTextBox></td>
             </tr>
             <tr>
                 <td>Außerlandwirtschaftliches Einkommen</td>
-                <td><telerik:RadNumericTextBox ID="TbALEinkommen" Value="0" runat="server"><NumberFormat DecimalSeparator=","  GroupSeparator="." /></telerik:RadNumericTextBox></td>
+                <td><telerik:RadNumericTextBox ID="TbALEinkommen" Value="7000" runat="server"><NumberFormat DecimalSeparator=","  GroupSeparator="." /></telerik:RadNumericTextBox></td>
             </tr>
             <tr>
                 <td>Lebenserhaltungskosten</td>
@@ -58,7 +58,7 @@
             </tr>
             <tr>
                 <td>Schuldzinsen</td>
-                <td><telerik:RadNumericTextBox ID="TbZinsen" Value="5000" runat="server"><NumberFormat DecimalSeparator="," GroupSeparator="."  /></telerik:RadNumericTextBox></td>
+                <td><telerik:RadNumericTextBox ID="TbZinsen" Value="8000" runat="server"><NumberFormat DecimalSeparator="," GroupSeparator="."  /></telerik:RadNumericTextBox></td>
             </tr>
         </table>
     <telerik:RadButton runat="server" Text="Einlesen" ID="radButtonGo" OnClick="radButtonGo_Click"></telerik:RadButton>

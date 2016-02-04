@@ -18,33 +18,38 @@ namespace MeisterCharts
             RadClientExportManager1.PdfSettings.Fonts.Add("Arial Unicode MS", "Fonts/ArialUnicodeMS.ttf");
 
 
-            if (!Page.IsPostBack )
+            if (!Page.IsPostBack)
             {
                 #region ReadQueryString
                 var ertrag = Convert.ToDouble(Request.QueryString["e"]);
-                TbErtrag.Value = ertrag;
                 var bestand = Convert.ToDouble(Request.QueryString["b"]);
-                TbBestandsveränderung.Value = bestand;
                 var aufwand = Convert.ToDouble(Request.QueryString["a"]);
-                TbAufwand.Value = aufwand;
                 var pacht = Convert.ToDouble(Request.QueryString["p"]);
-                TbPacht.Value = pacht;
-                var maschinen = Convert.ToDouble(Request.QueryString["m"]);
-                TbAfAMaschinen.Value = maschinen;
-                var gebäude = Convert.ToDouble(Request.QueryString["g"]);
-                TbAfAGebäude.Value = gebäude;
-                var sozial = Convert.ToDouble(Request.QueryString["s"]);
-                TbSozial.Value = sozial;
-                var alek = Convert.ToDouble(Request.QueryString["alek"]);
-                TbALEinkommen.Value = alek;
-                var leben = Convert.ToDouble(Request.QueryString["l"]);
-                TbLebenskosten.Value = leben;
-                var svb = Convert.ToDouble(Request.QueryString["svb"]);
-                TbSVB.Value = svb;
-                var steuer = Convert.ToDouble(Request.QueryString["st"]);
-                TbSteuer.Value = steuer;
-                var zinsen = Convert.ToDouble(Request.QueryString["z"]);
-                TbZinsen.Value = zinsen;
+
+                if ((ertrag + bestand + aufwand + pacht) != 0)
+                {
+                    TbBestandsveränderung.Value = bestand;
+                    TbErtrag.Value = ertrag;
+                    TbAufwand.Value = aufwand;
+                    TbPacht.Value = pacht;
+
+                    var maschinen = Convert.ToDouble(Request.QueryString["m"]);
+                    TbAfAMaschinen.Value = maschinen;
+                    var gebäude = Convert.ToDouble(Request.QueryString["g"]);
+                    TbAfAGebäude.Value = gebäude;
+                    var sozial = Convert.ToDouble(Request.QueryString["s"]);
+                    TbSozial.Value = sozial;
+                    var alek = Convert.ToDouble(Request.QueryString["alek"]);
+                    TbALEinkommen.Value = alek;
+                    var leben = Convert.ToDouble(Request.QueryString["l"]);
+                    TbLebenskosten.Value = leben;
+                    var svb = Convert.ToDouble(Request.QueryString["svb"]);
+                    TbSVB.Value = svb;
+                    var steuer = Convert.ToDouble(Request.QueryString["st"]);
+                    TbSteuer.Value = steuer;
+                    var zinsen = Convert.ToDouble(Request.QueryString["z"]);
+                    TbZinsen.Value = zinsen;
+                }
                 #endregion
             }
 
@@ -99,7 +104,7 @@ namespace MeisterCharts
             gesamteinkommen.ColorP2 = "#806000";
             gesamteinkommen.NameP2 = gesamteinkommen.ValuePositiv2 != 0 ? "+Sozialeinkommen" : "";
             gesamteinkommen.ValuePositiv3 = (double)TbALEinkommen.Value;
-            gesamteinkommen.NameP3 = gesamteinkommen.ValuePositiv2 != 0 ? "+sonstiges Einkommen" : "";
+            gesamteinkommen.NameP3 = gesamteinkommen.ValuePositiv3 != 0 ? "+außerlandw. Einkommen" : "";
             gesamteinkommen.ColorP3 = gesamteinkommen.ColorP2;
             gesamteinkommen.NameP1 = "Einkünfte LuF";
             gesamteinkommen.ColorP1 = einkünfte.ColorP1;
